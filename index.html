@@ -1,146 +1,885 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="icon" type="image/png" href="images/lse_logo.png">
-  <script crossorigin="anonymous" integrity="sha512-odXFR6jGqGLJay2LHI5hit0IEfyxJ2UexST/
-  qvnljBPrbXMwU44CoVddZjD9EsrtS6bMOoz8lC2yU0nhyh9yyg==" src="https://lib.baomitu.com/echarts/5.0.0/echarts.common.js"></script>
-  <title>Tingxuan Wu</title>
+<html>
+
+  <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFR2GFKT75"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-RFR2GFKT75');
+  </script> -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  })(window,document,'script','dataLayer','GTM-NC38VTD');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="refresh" content="0; URL=https://cs.stanford.edu/~leoyuan/"> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	<!-- <meta name="google-site-verification" content="u_--0s_Uw50r4zCgRrzltkmFhNCduYOJwPGlKVTuNJU" /> -->
+
+  <title>Hefan Zhang</title>
+  <meta name="description" lang="en" content="This is an academic website for Hefan Zhang">
+  <meta name="keywords" lang="en" content="Hefan Zhang" />
+  
+
+  <link rel="shortcut icon" href="images/stamp.png">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/academicons.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+  <script src="js/jquery-2.1.3.min.js"> </script>
+
+  <!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+</script>
+<![endif]-->
+
+  <script type="text/javascript">
+    function ShowHide(divId, linkDivId) {
+        if(document.getElementById(divId).style.display == 'none') {
+            document.getElementById(divId).style.display='block';
+            document.getElementById(linkDivId).style.display='none'; // Hide the "read more" link
+        }
+        else {
+            document.getElementById(divId).style.display = 'none';
+        }
+    }
+  </script>
+
+  <style>
+    /* 为所有列表项设置样式 */
+    li.indented {
+        position: relative;
+        padding-left: 90px; /* 这是对齐效果的关键，可以根据实际内容调整这个值 */
+    }
+
+    li.indented::before {
+        content: attr(data-date);
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+    }
+  </style>
+  
+
+  
 </head>
+
+
 <body>
-  <div class="loading">
-    <div class="wriggle">
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
-      <div class="rectangle"></div>
+
+    <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC38VTD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+    <header class="site-header">
+
+  <div class="wrapper">
+<nav class="site-nav">
+  <a href="#" class="menu-icon">
+    <svg viewBox="0 0 18 15">
+      <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+      <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+      <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+    </svg>
+  </a>
+
+  <div class="trigger">
+    <a class="page-link" href="#bio"><b>Biography</b></a>
+    <!-- <a class="page-link" href="#timeline"><b>Experiences</b></a> -->
+    <a class="page-link" href="#publications"><b>Publications</b></a>
+    <a class="page-link" href="#codebase"><b>GitHub</b></a>
+    <a class="page-link" href="#awards"><b>Honors & Awards</b></a>
+    <a class="page-link" href="#academicservices"><b>Academic Services </b></a>
+    <!--<a class="page-link" href="#otherprojects">Projects</a>-->
+    <!-- Button for Posts -->
+  </div>
+</nav>
+  </div>
+</header>
+
+  <div id="profile-cover" class="cover shallow-bg img-responsive"> 
+    <div id="profile-namecard" class="profile-wrapper wrapper-light">
+      <div id="my-pic" class="profile-col profile-col-1">
+        <img id="profile-avatar" src="images/myself.jpg" alt="Me" class="circle-img border-dark"-/>
+      </div>
+      <div id="my-contact" class="profile-col profile-col-2">
+        <div id="my-name" class="text-grey-dark">
+          Hefan Zhang
+        </div>
+        <div id="my-title" class="text-grey">
+          PhD Candidate, Dartmouth College
+        </div>
+        <div id="my-email" class="text-grey-light">
+          hefan.zhang.gr [at] dartmouth.edu
+        </div>
+	</div>
+        <div id="my-desc" class="profile-col profile-col-2 hide">
+          <div id="my-desc-title">
+            Another me
+          </div>
+          <div id="my-desc-content">
+            I enjoy Chinese Calligraphy, playing Pipa, and have a strong appreciation for logic-based puzzle games that emphasize mathematical reasoning, such as Sudoku. 
+          </div>
+        </div>
+        <div id="social-media-normal" class="social-media">
+          <a href="https://scholar.google.com/citations?hl=en&user=wRwevIkAAAAJ" target="_blank" class="icon-button linkedin">
+          <i class="ai ai-google-scholar-square icon-linkedin"></i>
+            <span></span>
+          </a>
+
+          <a href="https://github.com/HF-heaven" target="_blank" class="icon-button github">
+            <i class="fa fa-github icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/hefan-zhang-8673b82aa" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-linkedin icon-linkedin"></i>
+            <span></span>
+          </a>
+         
+          <a href="work/CV_Hefan_Zhang-0111.pdf" target="_blank" class="icon-button github">
+            <i class="ai ai-cv icon-github"></i>
+            <span></span>
+          </a>
+          <!-- <a href="https://www.xiaohongshu.com/user/profile/616ae887000000000201f2fa" class="icon-button xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
+            <i> <img src="https://cdn.simpleicons.org/xiaohongshu/FF2D55" alt="" width="45" height="45" style="vertical-align:middle;"> </i>
+            <span></span>
+          </a> -->
+
+          <a href="hefan.zhang.gr@dartmouth.edu" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-envelope icon-linkedin"></i>
+            <span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- <div id="my-desc" class="profile-col profile-col-2 hide">
+        <div id="my-desc-title">
+          Another me.
+        </div>
+        <div id="my-desc-content">
+          I enjoy running, traveling, hiking, movies, music and so much more<br>
+        </div>
+      </div> -->
     </div>
-    <div class="tip">&nbsp;&nbsp;Welcome to Tingxuan's Website!</div>
   </div>
-  <div class="content">
-    <nav class="nav1-show">
-      <a href="index.html"><h2 class="title">Tingxuan's Website</h2></a>
-      <ul class="nav-ul">
-        <li class="nav-item"><a href="#">Biography</a></li>
-        <li class="nav-item"><a href="#Publications">Publications</a></li>
-        <!-- <li class="nav-item"><a href="./CV.pdf">CV</a></li> -->
-        <li class="nav-item"><a href="#Contact">Contact</a></li>
-      </ul>
-    </nav>
-    <nav class="nav2-show">
-      <a href="index.html"><h2 class="title">TINGXUAN'S WEBSITE</h2></a>
-    </nav>
-    <ul class="nav-ul">
-      <li class="nav-item"><a style="color:#9f2222; text-decoration: none;" href="#">Biography</a></li>
-      <li class="nav-item"><a style="color:#9f2222; text-decoration: none;" href="#Publications">Publications</a></li>
-      <!-- <li class="nav-item"><a href="./CV.pdf">CV</a></li> -->
-      <li class="nav-item"><a style="color:#9f2222; text-decoration: none;" href="#Contact">Contact</a></li>
-    </ul>
-    <section class="body">
-      <div class="left">
-        <div class="head-img"></div>
-         <!-- <h1 class="name">Tingxuan Wu</h1>  -->
-        <!-- <h3 class="desc2" style="color: blue;">Winnie</h4> -->
-        <h3 class="desc2">Tingxuan (Winnie) Wu</h3> <br>
+  <script type="text/javascript">
+    function deepFeature()
+    {
+      $('#profile-avatar').attr('src', 'images/myself_hide.png');
+      $('#profile-avatar').removeClass('border-dark');
+      $('#profile-avatar').addClass('border-bright');
+
+      $('#profile-cover').removeClass('shallow-bg');
+      $('#profile-cover').addClass('deep-bg');
       
-        <ul class="icon">
-          <li class="icon-item"><a href="mailto:t.wu32@lse.ac.uk"><img src="./svg_icons/mail.png" alt=""></a></li>
-          <li class="icon-item"><img src="./svg_icons/linkedin.jpeg" alt="" onclick="window.location.href='http:\/\/www.linkedin.com/in/tingxuan-wu-4a641b221/'"></li>
-          <li class="icon-item"><img src="./svg_icons/googlescholar.png" alt="" onclick="window.location.href='https:\/\/scholar.google.com/citations?hl=en&user=PK9zcakAAAAJ'"></li>
-          <!-- <li class="icon-item"><img src="./svg_icons/curriculum-vitae-resume-svgrepo-com.svg" alt="" onclick="window.location.href='./Xingjian_CV.pdf'" ></li> -->
+      $('#profile-namecard').removeClass('wrapper-light');
+      $('#profile-namecard').addClass('wrapper-dark');
+      
+      $('#my-desc').removeClass('hide');
+      $('#my-contact').addClass('hide');
+      $('#social-media-normal').addClass('hide');
+      // console.log('Move in now...');
+    }
 
+    function shallowFeature()
+    {
+      $('#profile-avatar').attr('src', 'images/myself.jpg');
+      $('#profile-avatar').removeClass('border-bright');
+      $('#profile-avatar').addClass('border-dark');
+
+      $('#profile-cover').removeClass('deep-bg');
+      $('#profile-cover').addClass('shallow-bg');
+      
+      $('#profile-namecard').removeClass('wrapper-dark');
+      $('#profile-namecard').addClass('wrapper-light');
+      
+      $('#my-contact').removeClass('hide');
+      $('#my-desc').addClass('hide');
+      $('#social-media-normal').removeClass('hide');
+      // console.log('Move out now...');
+    }
+
+    $(function() { 
+      $('#my-pic').hover(deepFeature, shallowFeature);
+    })
+
+  </script>
+
+<div class="page-content">
+<div class="wrapper">
+<div id="bio" class="bio">
+
+  <h1 class="md-heading text-left">
+    <i class="fa fa-id-card" aria-hidden="true"></i>
+    About
+  </h1>
+  <div class="bio-body" style="overflow:hidden;">
+    <p>
+      I am a Ph.D. candidate in Computer Science at Dartmouth College, where I am fortunate to be advised by <a href="https://web.cs.dartmouth.edu/people/soroush-vosoughi" target="_blank">Soroush Vosoughi</a>. My research interests lie in natural language processing, machine learning, interpretability, and the simulation of large language models. 
+I'm always looking for related colaboration and internship opportunities. If you are interested to chat with me, feel free to drop me an <a href="hefan.zhang.gr@dartmouth.edu" target="_blank">email</a>.
+
+      <br>
+    </p>
+
+    <div style="width: 50%; float:left">
+			<h3>
+		    <i class="fa fa-star" aria-hidden="true"></i>
+		    <strong>Interests</strong>
+			</h3>
+      <ul>
+        <!-- <li><b>Multi-modality</b></li> -->
+        <li><b>Multi-agent LLM Simulation and Generation</b></li>
+        <a href="https://aclanthology.org/2025.findings-emnlp.808/" target="_blank">[Cross-cultural Simulation]</a><a href="https://aclanthology.org/2025.naacl-long.203/" target="_blank">[Persuasion-simulator]</a><a href="https://aclanthology.org/2025.findings-emnlp.1117/" target="_blank">[Strategy-control]</a>
+        <li><b>Interpretability of Large Language Models</b></li>
+        <a href="https://github.com/HF-heaven/Correlation-between-Confidence-Measurements" target="_blank">[Uncertainty Measurements]</a><a href="https://aclanthology.org/2023.acl-short.35/" target="_blank">[Syntactic Probing]</a>
+      </ul>
+    </div>
+
+    <div style="width: 50%; float:right">
+			<h3>
+				<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+				<strong>Education</strong>
+			</h3>
+			<b>Dartmouth College</b><br>
+			<ul>
+        <li>Ph.D in Dartmouth, Sep. 2023 - Now</li>
+        <li>Mentor: <a href="https://web.cs.dartmouth.edu/people/soroush-vosoughi" target="_blank">Soroush Vosoughi</a> </li>
+      </ul>
+      <b>Shanghai Jiao Tong University</b><br>
+        <ul>
+          <li>Bachelor in Information Engineering and Mathematics, Sep. 2018 - June. 2022</li>
         </ul>
-      </div>
-      <div class="right">
-        <h1 class="biography-title">About Me</h1>
-        <br><br>
-        <section class="biography">
-        <p style="font-size: 19px;">I am a Financial Mathematics and Statistics graduate from the <a style="color:#4169E1; text-decoration: none;" href="https://www.lse.ac.uk/">London School of Economics and Political Science</a> 
-          (LSE) <a href="https://www.lse.ac.uk/" target="_blank"><img src="images/lse_logo.png" width="30" height="30" alt="profile picture"></a>. My current research focuses on multimodal large language models (MLLMs) 
-          for advanced understanding, as I believe the future of AI lies in its ability to comprehend and process multiple forms of information simultaneously - just as humans do.  </p>
-
-          <br>
-
-        <p style="font-size: 19px;">
-          I have experience at leading Chinese financial institutions. At <a style="color:#4169E1; text-decoration: none;" href="https://www.foundersc.com/">Founder Securities</a> <a href="https://www.foundersc.com/" target="_blank"><img src="images/employment/fangzheng.png" width="30" height="30" alt="profile picture"></a> (2024), I developed real-time analytics dashboards for Chinese government bonds and design deep learning models for macroeconomic forecasting.
-          At <a style="color:#4169E1; text-decoration: none;" href="https://www.ebfcn.com/">Everbright Futures</a> <a href="https://www.ebfcn.com/" target="_blank"><img src="images/employment/guangda.jpeg" width="30" height="30" alt="profile picture"></a> (2022), I worked on multi-factor modeling for commodity futures prediction and portfolio optimization. 
-          At <a style="color:#4169E1; text-decoration: none;" href="https://www.guosen.com.cn/gs/">Guosen Securities</a>  <a href="https://www.guosen.com.cn/gs/" target="_blank"><img src="images/employment/guoxin.jpeg" width="30" height="30" alt="profile picture"></a> (2021), I analyzed healthcare stocks and market trends to support investment strategies.
-        </p>
-
-      </div>
-    </section>
-
-
-    <section id="Publications" class="showcase">
-      <div class="showcase-left">
-        <div class="showcase-left-title">Publications</div>
-        <!-- <div class="footnote">
-            <p><sup>*</sup> indicates equal contribution</p>
-        </div> -->
-      </div>
-      <div class="showcase-right">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/MSM-BD.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="images/publications/MSM_BD.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>MSM-BD: Multimodal Social Media Bot Detection Using Heterogeneous Information</papertitle>
-                </a>
-                <br>
-                <strong>Tingxuan Wu</strong>, Zhaorui Ma, Yanjun Cui, Ziyi Zhou, Eric Wang
-                <br>
-                <em>AAAI Conference on Artificial Intelligence <a href="https://w3phiai2025.w3phi.com/index.html" target="_blank" style="color:#4169E1; text-decoration: none;">W3PHIAI-25</a>, Springer Nature in Studies in Computational Intelligence</em>, 2025
-                <br>
-                <p></p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/amuse.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="images/publications/Amuse.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Learning Musical Representations for Music Performance Question Answering</papertitle>
-                </a>
-                <br>
-                Xingjian Diao, Chunhui Zhang, <strong>Tingxuan Wu</strong>, Ming Cheng, Zhongyu Ouyang, Weiyi Wu, Jiang Gui
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (<a href="https://2024.emnlp.org/" target="_blank" style="color:#4169E1; text-decoration: none;">EMNLP</a>)</em>, 2024
-                <br>
-                <p></p>
-              </td>
-            </tr>
-
-        </tbody></table>
-          
-      </div>
-    </section>
-
-
-    <section id="Contact" class="showcase">
-      <div class="showcase-left">
-        <div class="showcase-left-title">Contact</div>
-      </div>
-      <div class="showcase-right">
-        <ul class="contact-ul">
-          <li class="contact-item">
-            <img  src="./svg_icons/bearmail.png" alt="">
-            <a href="mailto:t.wu32@lse.ac.uk">t.wu32@lse.ac.uk</a>
-          </li>          
-        </ul>
-      </div>
-    </section>
-    
-    <footer>Tingxuan Wu © 2025</footer>
+    </div>
+  
   </div>
-  <script src="./index.js"></script>
-</body>
+</div>
+
+<div id="news" class="bio">
+  <h1 class="md-heading text-left">
+    <i class="fa fa-tasks" aria-hidden="true"></i>
+    News
+  </h1>  
+  <ul>
+    	<li class="indented" data-date="[Jan, 2026]"> Served as a reviewer for ACL Rolling Review (ARR) - Jan 2026.</li>
+	    <li class="indented" data-date="[Dec, 2025]"> Passed my Ph.D. qualifying examination (RPE) and advanced to candidacy. </li>
+    	<li class="indented" data-date="[Nov, 2025]"> Served as Area Chair for ACL Rolling Review (ARR) - Oct 2025.</li>
+    	<li class="indented" data-date="[Aug, 2025]"> Three papers accepted to EMNLP 2025. Thanks to all collaborators!</li>
+    	<!-- <li class="indented" data-date="[Oct, 2022]"> One paper accepted to 36th Conference on Neural Information Processing Systems, GLFrontiers, and selected for <b><span style="color: red;">Oral</span></b> presentation.</li>
+   	  <li class="indented" data-date="[Oct, 2022]"> Two papers accepted to 36th Conference on Neural Information Processing Systems, and one paper selected for <b><span style="color: red;">Spotlight</span></b> presentation.</li> -->
+  </ul>
+</div>
+
+<!-- <div class="wrapper"> -->
+<!--  <div id="timeline" class="timeline-brief">
+    <h1 class="md-heading text-left">
+      <i class="fa fa-tasks" aria-hidden="true"></i>
+      Experiences
+    </h1>
+  
+    <div class="timeline-body">
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img class="social-icon" src="images/damo_logo_2.avif"/>
+          Aug, 2024 - Now
+        </div>
+        <div class="timeline-title">
+          Algorithm Expert @ <a href="https://damo.alibaba.com/?language=zh" target="_blank">DAMO Academy, Alibaba</a>
+        </div>
+        <div class="timeline-desc">
+          <b> Join as <img class="social-icon" src="images/alistar.png" style="width:20px; height:20px; vertical-align:middle; position:relative; top:-2px;"/>&#8201<a href="https://talent.alibaba.com/activity/ali-star?lang=zh" target="_blank">AliStar,</a> focus on Embodied AI and VLA models. </b>
+          <div class="timeline-host">
+            Supervisor: <a href="https://prokia.github.io/">Shuangjia Zheng</a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img class="social-icon" src="images/MSRA_3.jpg"/>
+          Aug, 2023 - May, 2024
+        </div>
+        <div class="timeline-title">
+          Research Intern @ <a href="https://www.msra.cn/" target="_blank">MSRA</a>
+        </div>
+        <div class="timeline-desc">
+          <div class="timeline-host">
+            Supervisor: <a href="https://chenfei-wu.github.io//" target="_blank">Dr. Chenfei Wu</a>, <a href="https://nanduan.github.io//" target="_blank">Dr. Nan Duan</a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img class="social-icon" src="images/SUSTech_3.png"/>
+          Aug, 2023 - July, 2024
+        </div>
+        <div class="timeline-title">
+          Visiting Student @ <a href="https://www.sustech.edu.cn/en/" target="_blank">SUSTech</a>
+        </div>
+        <div class="timeline-desc">
+          <div class="timeline-host">
+            Supervisor: <a href="https://www.sustech.edu.cn/en/faculties/zhangjianguo.html" target="_blank">Prof. Jianguo Zhang</a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="timeline-item">
+        <div class="timeline-date">
+          <img class="social-icon" src="images/ntu_logo_2.png"/>
+          Mar, 2023 - Sep, 2023
+        </div>
+        <div class="timeline-title">
+          Visiting Student @ <a href="https://www.mmlab-ntu.com/" target="_blank">MMLab, NTU</a>
+        </div>
+        <div class="timeline-desc">
+        <div class="timeline-host">
+          Supervisor: <a href="https://liuziwei7.github.io/" target="_blank">Prof. Ziwei Liu</a>
+        </div>
+      </div>
+      </div>
+  
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <img class="social-icon" src="images/tongyi.png"/>
+            Mar, 2022 - Mar, 2023
+          </div>
+          <div class="timeline-title">
+            Research Intern @ <a href="https://tongyi.aliyun.com/welcome" target="_blank">Tongyi Lab, Alibaba</a>
+          </div>
+          <div class="timeline-desc">
+            <div class="timeline-host">
+              Supervisor: <a href="https://scholar.google.com/citations?user=ZO3OQ-8AAAAJ&hl=en" target="_blank">Dr. Shiwei Zhang</a> 
+            </div>
+          </div>
+        </div>
+  
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <img class="social-icon" src="images/hikvision.jpg"/>
+              Mar, 2020 - July, 2020
+            </div>
+            <div class="timeline-title">
+              Algorithm Intern @ <a href="https://www.hikvision.com/en/" target="_blank">HIKVISION</a>
+            </div>
+            <div class="timeline-desc">
+              <div class="timeline-host">
+                Supervisor: <a href="https://ieeexplore.ieee.org/author/37088529015" target="_blank"> Dr. Yushi Zhu</a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <img class="social-icon" src="images/cuhk_logo.png"/>
+              Nov, 2019 - Feb, 2020
+            </div>
+            <div class="timeline-title">
+              Research Assistant @ <a href="https://www.cuhk.edu.cn/en" target="_blank">CUHK(SZ)</a>
+            </div>
+            <div class="timeline-desc">
+              <div class="timeline-host">
+                Supervisor: <a href="https://sites.google.com/view/zhouliguang" target="_blank">Dr. Liguang Zhou</a>, <a href="https://sites.google.com/site/lamtinlun" target="_blank">Prof. Tin Lun Lam</a>
+              </div>
+            </div>
+          </div>
+  
+    <br>
+  </div>
+  </div> -->
+
+
+<div id="publications" class="publications">
+  <h1 class="md-heading text-left">
+    <i class="fa fa-file" aria-hidden="true"></i>
+    Publications (<button class="custom-button" id="show-selected-btn"> Core Contributions </button> / <button class="custom-button" id="show-all-btn"> All Publications </button>)
+  </h1>
+
+
+
+  <div class="pub-list">
+
+    <div class="pub" data-selected="true">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/EMNLP2025Culture.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          Enhancing LLM-Based Persuasion Simulations with Cultural and Speaker-Specific Information
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Weicheng Ma*, <b>Hefan Zhang*</b>, Shiyu Ji, Farnoosh Hashemi, Qichao Wang, Ivory Yang, Joice Chen, Juanwen Pan, Michael Macy, Saeed Hassanpour, Soroush Vosoughi
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">EMNLP 2025 (findings)</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://aclanthology.org/2025.findings-emnlp.808/" target="_blank">Paper</a>]
+          [<a class="tag" href="https://github.com/HF-heaven/Cross-Cultural-Persuasion-Simulations" target="_blank">Code</a>]
+        </div>
+      </div>
+    </div>
+
+    <div class="pub" data-selected="false">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/EMNLP2025Strategy.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          A Generalizable Rhetorical Strategy Annotation Model Using LLM-based Debate Simulation and Labelling
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Shiyu Ji*, Farnoosh Hashemi*, Joice Chen, Juanwen Pan, Weicheng Ma, <b>Hefan Zhang</b>, Sophia Pan, Ming Cheng, Shubham Mohole, Saeed Hassanpour, Soroush Vosoughi, Michael Macy
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">EMNLP 2025 (findings)</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://aclanthology.org/2025.findings-emnlp.1117/" target="_blank">Paper</a>]
+        </div>
+      </div>
+    </div>
+
+    <div class="pub" data-selected="false">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/EMNLP2025Recontextualizing.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          Recontextualizing revitalization: A mixed media approach to reviving the nüshu language
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Ivory Yang, Xiaobo Guo, Yuxin Wang, <b>Hefan Zhang</b>, Yaning Jia, William Dinauer, Soroush Vosoughi
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">EMNLP 2025 (main)</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://aclanthology.org/2025.emnlp-main.627/" target="_blank">Paper</a>]
+        </div>
+      </div>
+    </div>
+
+    <div class="pub" data-selected="true">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/NAACL2025Communication.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          Communication Makes Perfect: Persuasion Dataset Construction via Multi-LLM Communication
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Weicheng Ma, <b>Hefan Zhang</b>, Ivory Yang, Shiyu Ji, Joice Chen, Farnoosh Hashemi, Shubham Mohole, Ethan Gearey, Michael Macy, Saeed Hassanpour, Soroush Vosoughi
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">NAACL 2025 (oral)</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://aclanthology.org/2025.naacl-long.203/" target="_blank">Paper</a>]
+          [<a class="tag" href="https://github.com/HF-heaven/LLM-based_persuasion_simulator" target="_blank">Code</a>]
+        </div>
+      </div>
+    </div>
+
+    <div class="pub" data-selected="false">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/CVPR2024Efflex.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          Efflex: Efficient and flexible pipeline for spatio-temporal trajectory graph modeling and representation learning
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Ming Cheng, Ziyi Zhou, Bowen Zhang, Ziyu Wang, Jiaqi Gan, Ziang Ren, Weiqi Feng, Yi Lyu, <b>Hefan Zhang</b>, Xingjian Diao
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">CVPR 2024 Workshops</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://openaccess.thecvf.com/content/CVPR2024W/SG2RL/html/Cheng_Efflex_Efficient_and_Flexible_Pipeline_for_Spatio-Temporal_Trajectory_Graph_Modeling_CVPRW_2024_paper.html" target="_blank">Paper</a>]
+        </div>
+      </div>
+    </div>
+
+    <div class="pub" data-selected="true">
+      <div class="pub-left">
+        <img class="intro-img frame" src="images/ACL2023improve.png">
+      </div>
+      <div class="pub-right">
+        <div class="title">
+          Improving Syntactic Probing Correctness and Robustness with Control Tasks
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Weicheng Ma, Brian Wang, <b>Hefan Zhang</b>, Lili Wang, Rolando Coto-Solano, Saeed Hassanpour, Soroush Vosoughi
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">ACL 2023 (main)</span>
+          <span class="place"></span>
+        </div>
+        <div class="tags">
+          [<a class="tag" href="https://aclanthology.org/2023.acl-short.35/" target="_blank">Paper</a>]
+        </div>
+      </div>
+    </div>
+
+        
+      </div>
+    </div>
+
+    
+
+  </div>
+</div>
+</div>
+	
+<!-- JavaScript to handle button clicks -->
+<script>
+  // Get the buttons and publications
+  const showSelectedBtn = document.getElementById('show-selected-btn');
+  const showAllBtn = document.getElementById('show-all-btn');
+  const publications = document.querySelectorAll('.pub');
+
+  // Add event listener to 'Show Selected Publication' button
+  showSelectedBtn.addEventListener('click', function() {
+    publications.forEach(pub => {
+      if (pub.getAttribute('data-selected') === 'true') {
+        pub.style.display = 'block';  // Show selected publication
+      } else {
+        pub.style.display = 'none';  // Hide other publications
+      }
+    });
+  });
+
+  // Add event listener to 'Show All' button
+  showAllBtn.addEventListener('click', function() {
+    publications.forEach(pub => {
+      pub.style.display = 'block';  // Show all publications
+    });
+  });
+</script>
+
+<script>
+  const repos = [
+    { owner: "HF-heaven", repo: "LLM-based_persuasion_simulator", starId: "star-count", forkId: "fork-count" },
+    { owner: "HF-heaven", repo: "Cross-Cultural-Persuasion-Simulations", starId: "star-count-2", forkId: "fork-count-2" },
+  ];
+
+  async function loadGitHubStats() {
+    for (const { owner, repo, starId, forkId } of repos) {
+      try {
+        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+        if (!res.ok) throw new Error("GitHub API error");
+        const data = await res.json();
+        document.getElementById(starId).innerText = data.stargazers_count ?? "–";
+        document.getElementById(forkId).innerText = data.forks_count ?? "–";
+      } catch (e) {
+        console.error(`Failed to load stats for ${owner}/${repo}`, e);
+        document.getElementById(starId).innerText = "–";
+        document.getElementById(forkId).innerText = "–";
+      }
+    }
+  }
+
+  loadGitHubStats();
+</script>
+
+
+<div class="wrapper">
+  <div id="codebase" class="bio">
+    <div class="bio-body" style="overflow:hidden;">
+      <h1 class="md-heading text-left">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        GitHub
+      </h1>  
+      <div class="card-container">
+
+        <div class="github-card">
+          <div>
+            <a class="repo-link" href="https://github.com/HF-heaven/LLM-based_persuasion_simulator" target="_blank">
+              HF-heaven/<strong>LLM-based_persuasion_simulator</strong>
+            </a>
+            <span class="label">Project</span>
+          </div>
+          <div class="description">
+            Persuasion Dataset Generation by Multi-agent LLM framework.
+          </div>
+          <div class="meta">
+            <div class="dot"></div>
+            <div>Python</div>
+            <a href="https://github.com/HF-heaven/LLM-based_persuasion_simulator/stargazers" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 
+                14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 
+                179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 
+                119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 
+                26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 
+                8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
+              </svg>
+              Star &nbsp;  <span id="star-count">-</span>
+            </a>
+            <a href="https://github.com/HF-heaven/LLM-based_persuasion_simulator/network/members" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 
+                8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 
+                0V7a1.51 1.51 0 0 0 .82 1.34L8 
+                9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 
+                1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 
+                4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 
+                0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 
+                1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
+                </path>
+              </svg>
+              Fork &nbsp; <span id="fork-count">–</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="github-card">
+          <div>
+            <a class="repo-link" href="https://github.com/HF-heaven/Cross-Cultural-Persuasion-Simulations" target="_blank">
+              HF-heaven/<strong>Cross-Cultural-Persuasion-Simulations</strong>
+            </a>
+            <span class="label">Project</span>
+          </div>
+          <div class="description">
+            Persuasion Simulation with Culture Backgrounds by LLM agents.
+          </div>
+          <div class="meta">
+            <div class="dot"></div>
+            <div>Python</div>
+            <a href="https://github.com/HF-heaven/Cross-Cultural-Persuasion-Simulations/stargazers" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 
+                14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 
+                179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 
+                119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 
+                26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 
+                8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
+              </svg>
+              Star &nbsp;<span id="star-count-2">1</span>
+            </a>
+            <a href="https://github.com/HF-heaven/Cross-Cultural-Persuasion-Simulations/network/members" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 
+                8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 
+                0V7a1.51 1.51 0 0 0 .82 1.34L8 
+                9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 
+                1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 
+                4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 
+                0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 
+                1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
+                </path>
+              </svg>
+              Fork &nbsp;<span id="fork-count-2">–</span>
+            </a>
+          </div>
+        </div>
+        
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div id="awards" class="bio">
+    <h1 class="md-heading text-left">
+      <i class="fa fa-tasks" aria-hidden="true"></i>
+      Selected Honors & Awards
+    </h1>
+    <ul>
+  <li> First Prize of The Chinese Mathematics Competitions, 2019.</li>
+	<li> Second Prize of Chinese Mathematical Olympiad in Senior, 2017.</li>
+	<li> Individual Silver Medal of World Mathematics Team Championship, 2016.</li>
+	<li> Second Prize of Chinese Mathematical Olympiad in Senior, 2016.</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .reviewer-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .reviewer-column {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    font-size: 0.85em; /* 字体略微变小 */
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 4px;
+  }
+
+  .reviewer-column::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .reviewer-column {
+      flex: 1 1 100%;
+    }
+  }
+
+  .reviewer-title {
+    margin-top: 12px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="wrapper">
+  <div id="academicservices" class="bio">
+    <div class="bio-body" style="overflow:hidden;">
+      <h1 class="md-heading text-left">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        Academic Services
+      </h1>  
+
+      <div class="reviewer-title">Peer Reviewer:</div>
+      <div class="reviewer-section">
+        <div class="reviewer-column">Association for Computational Linguistics (ACL) 2026</div>
+        <div class="reviewer-column">Empirical Methods in Natural Language Processing (EMNLP) 2025</div>
+        <div class="reviewer-column">Association for Computational Linguistics (ACL) 2025</div>
+      </div>
+
+      <div class="reviewer-title">Area Chair:</div>
+      <div class="reviewer-section">
+        <div class="reviewer-column">ACL Rolling Review (ARR) - Oct 2025</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div style="display: flex; justify-content: center; align-items: center;">
+  <div style="max-width: 400px; width: 100%;">
+    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=K9NLvpbM7GH1cTCvhvVlo4LW5p-d2mRZYw6UhrAFw0g&cl=ffffff&w=a"></script>
+  </div>
+</div> -->
+
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Personal Email:</li>
+          <li><a href="mailto:">hefan.zhang.gr [at] dartmouth.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+          <a href="https://scholar.google.com/citations?user=wRwevIkAAAAJ" target="_blank" class="icon-button github">
+          <i class="ai ai-google-scholar-square icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://github.com/HF-heaven" target="_blank" class="icon-button github">
+            <i class="fa fa-github icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/hefan-zhang-8673b82aa/" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-linkedin icon-linkedin"></i>
+            <span></span>
+          </a>
+          <a href="work/CV_Hefan_Zhang-0111.pdf" target="_blank" class="icon-button github">
+            <i class="ai ai-cv icon-github"></i>
+            <span></span>
+          </a> 
+          <!-- <a href="https://www.xiaohongshu.com/user/profile/616ae887000000000201f2fa" class="icon-button xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
+            <i> <img src="https://cdn.simpleicons.org/xiaohongshu/FF2D55" alt="" width="45" height="45" style="vertical-align:middle;"> </i>
+            <span></span>
+          </a> -->
+      </div>
+	<div class="footer-col footer-col-3">
+    	<!--<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwillhua127.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
+	<!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?user=Lxe71v4AAAAJ&hl=en&url=https%3A%2F%2Fscholar.google.com%2Fcitations&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
+		<p class="text">Last updated: Jan, 2025.<br>The style of this website is borrowed from <a href='https://leoyuan.site/' target="_blank">Zeqing Yuan's</a>.</p>
+	</div>
+  </div>
+  </div>
+
+</footer>
+    <div class="back-to-top">Top</div>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+    
+        }
+    });
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+  </body>
+
+<!--
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60071442-1', 'auto');
+  ga('send', 'pageview');
+</script>
+-->
+
+<!--<script src="custom-pub.js"></script>-->
 </html>
